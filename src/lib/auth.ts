@@ -11,7 +11,10 @@ export const lucia = new Lucia(adapter, {
     sessionCookie: {
         expires: true,
         attributes: {
-            secure: process.env.NODE_ENV === 'production'
+            secure: process.env.NODE_ENV === 'production',
+            // sameSite: 'none',
+            // path: '/',
+            // domain: '.zulfugar.com'
         }
     },
     getUserAttributes: (attributes) => {
